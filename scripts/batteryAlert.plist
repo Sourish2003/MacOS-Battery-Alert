@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Service identifier -->
+    <key>Label</key>
+    <string>com.user.batteryalert</string>
+    
+    <!-- Program to run -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/osascript</string>
+        <string>/usr/local/bin/batteryAlert.scpt</string>
+    </array>
+    
+    <!-- Run every 60 seconds -->
+    <key>StartInterval</key>
+    <integer>60</integer>
+    
+    <!-- Keep the service running -->
+    <key>KeepAlive</key>
+    <true/>
+    
+    <!-- Start when user logs in -->
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <!-- Only run when user is logged in -->
+    <key>LimitLoadToSessionType</key>
+    <string>Aqua</string>
+    
+    <!-- Error logging -->
+    <key>StandardErrorPath</key>
+    <string>/Users/%USER%/Library/Logs/BatteryAlert.err</string>
+    
+    <!-- Output logging -->
+    <key>StandardOutPath</key>
+    <string>/Users/%USER%/Library/Logs/BatteryAlert.out</string>
+    
+    <!-- Process control -->
+    <key>ProcessType</key>
+    <string>Background</string>
+    
+    <!-- Low priority to not interfere with user tasks -->
+    <key>LowPriorityIO</key>
+    <true/>
+</dict>
+</plist>
