@@ -62,8 +62,7 @@ echo "   • Set up background monitoring service"
 echo "   • Configure system integration"
 echo "   • Test notifications with sound"
 echo
-printf "Continue with installation? (Y/n): "
-read -n 1 -r REPLY
+read -p "Continue with installation? (Y/n): " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Nn]$ ]]; then
     echo "Installation cancelled by user."
