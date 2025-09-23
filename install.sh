@@ -77,7 +77,7 @@ if osacompile -o "$TEMP_SCRIPT" "$SOURCE_SCRIPT"; then
     # Set proper permissions and ownership
     echo "🔐 Setting permissions..."
     sudo chmod 755 "$COMPILED_SCRIPT"
-    sudo chown root:wheel "$COMPILED_SCRIPT"
+    sudo chown $USER:staff "$COMPILED_SCRIPT"
 else
     echo -e "${RED}❌ Failed to compile AppleScript${NC}"
     echo "Please check that scripts/batteryAlert.applescript exists and is valid."

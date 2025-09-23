@@ -4,13 +4,12 @@
 <dict>
     <!-- Service identifier -->
     <key>Label</key>
-    <string>com.user.batteryalert</string>
+    <string>com.sourish.batteryalert</string>
     
     <!-- Program to run -->
     <key>ProgramArguments</key>
     <array>
-        <string>/usr/bin/osascript</string>
-        <string>/usr/local/bin/batteryAlert.scpt</string>
+        <string>/usr/local/bin/BatteryAlert.app/Contents/MacOS/BatteryAlert</string>
     </array>
     
     <!-- Run every 60 seconds -->
@@ -19,7 +18,7 @@
     
     <!-- Keep the service running -->
     <key>KeepAlive</key>
-    <true/>
+    <false/>
     
     <!-- Start when user logs in -->
     <key>RunAtLoad</key>
