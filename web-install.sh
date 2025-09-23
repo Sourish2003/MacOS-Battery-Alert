@@ -62,7 +62,8 @@ echo "   • Set up background monitoring service"
 echo "   • Configure system integration"
 echo "   • Test notifications with sound"
 echo
-read -p "Continue with installation? (Y/n): " -n 1 -r
+printf "Continue with installation? (Y/n): "
+read REPLY
 echo
 if [[ $REPLY =~ ^[Nn]$ ]]; then
     echo "Installation cancelled by user."
@@ -166,7 +167,8 @@ echo
 
 # Sound troubleshooting prompt
 echo -e "${YELLOW}🔊 Heard the test sounds during installation?${NC}"
-read -p "   (Y/n): " -n 1 -r
+printf "   (Y/n): "
+read REPLY
 echo
 if [[ $REPLY =~ ^[Nn]$ ]]; then
     echo
